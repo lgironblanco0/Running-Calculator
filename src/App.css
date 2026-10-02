@@ -11,6 +11,7 @@
   &:hover {
     border-color: var(--accent-border);
   }
+  
   &:focus-visible {
     outline: 2px solid var(--accent);
     outline-offset: 2px;
@@ -20,39 +21,37 @@
 .hero {
   position: relative;
 
-  .base,
-  .framework,
-  .vite {
+  & .base,
+  & .framework,
+  & .vite {
     inset-inline: 0;
     margin: 0 auto;
   }
 
-  .base {
+  & .base {
     width: 170px;
     position: relative;
     z-index: 0;
   }
 
-  .framework,
-  .vite {
+  & .framework,
+  & .vite {
     position: absolute;
   }
 
-  .framework {
+  & .framework {
     z-index: 1;
     top: 34px;
     height: 28px;
-    transform: perspective(2000px) rotateZ(300deg) rotateX(44deg) rotateY(39deg)
-      scale(1.4);
+    transform: perspective(2000px) rotateZ(300deg) rotateX(44deg) rotateY(39deg) scale(1.4);
   }
 
-  .vite {
+  & .vite {
     z-index: 0;
     top: 107px;
     height: 26px;
     width: auto;
-    transform: perspective(2000px) rotateZ(300deg) rotateX(40deg) rotateY(39deg)
-      scale(0.8);
+    transform: perspective(2000px) rotateZ(300deg) rotateX(40deg) rotateY(39deg) scale(0.8);
   }
 }
 
@@ -78,12 +77,13 @@
   & > div {
     flex: 1 1 0;
     padding: 32px;
+    
     @media (max-width: 1024px) {
       padding: 24px 20px;
     }
   }
 
-  .icon {
+  & .icon {
     margin-bottom: 16px;
     width: 22px;
     height: 22px;
@@ -111,11 +111,11 @@
   gap: 8px;
   margin: 32px 0 0;
 
-  .logo {
+  & .logo {
     height: 18px;
   }
 
-  a {
+  & a {
     color: var(--text-h);
     font-size: 16px;
     border-radius: 6px;
@@ -130,7 +130,8 @@
     &:hover {
       box-shadow: var(--shadow);
     }
-    .button-icon {
+    
+    & .button-icon {
       height: 18px;
       width: 18px;
     }
@@ -141,11 +142,11 @@
     flex-wrap: wrap;
     justify-content: center;
 
-    li {
+    & li {
       flex: 1 1 calc(50% - 8px);
     }
 
-    a {
+    & a {
       width: 100%;
       justify-content: center;
       box-sizing: border-box;
@@ -156,6 +157,7 @@
 #spacer {
   height: 88px;
   border-top: 1px solid var(--border);
+  
   @media (max-width: 1024px) {
     height: 48px;
   }
@@ -177,6 +179,7 @@
     left: 0;
     border-left-color: var(--border);
   }
+  
   &::after {
     right: 0;
     border-right-color: var(--border);

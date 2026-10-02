@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { secondsToTime, generateSplits } from '../utils/runningCalculations';
 
 export default function Calculator() {
